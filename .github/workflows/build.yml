@@ -23,12 +23,8 @@ on:
       - '.github'    
 
 jobs:
-  prepare:
-    name: Generate Artifact Name
-    uses: actions/checkout@v3
-
+  
   build:
-    needs: [prepare]
     steps:
       - uses: actions/checkout@v3
       - run: |
