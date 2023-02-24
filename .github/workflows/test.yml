@@ -10,6 +10,7 @@ on:
 
     jobs:
       greet:
+        name: Greet
         runs-on: ubuntu-latest
         steps:
           - name: Send greeting
