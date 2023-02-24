@@ -4,9 +4,9 @@ on:
     inputs:
       name:
         # Friendly description to show in the UI instead of 'name'
-      description: 'Person to greet'
-      required: true
-      default: 'World'
+        description: 'Person to greet'
+        required: true
+        default: 'World'
 
   jobs:
     greet:
