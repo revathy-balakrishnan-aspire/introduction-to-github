@@ -1,0 +1,36 @@
+name: Build Portalengine
+on:
+  workflow_dispatch:
+    
+  push:
+    branches:
+      - my-*
+      - main
+      - develop
+      - feature-*
+      - release-v*
+      - hotfix-*
+      - bugfix-m-*
+      - bugfix-*
+      - feature/**
+      - release/v**
+      - hotfix/**
+      - bugfix-m/**
+      - bugfix/**
+    paths-ignore:
+      - '.gitignore'
+      - 'README.md'
+      - '.github'    
+
+jobs:
+  prepare:
+    name: Generate Artifact Name
+    uses: actions/checkout@v3
+
+  build:
+    needs: [prepare]
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+          echo "Test Workflow"
+  
