@@ -1,7 +1,6 @@
 name: Build Portalengine
 on:
-  workflow_dispatch:
-    
+  workflow_dispatch:    
   push:
     branches:
       - My-*
@@ -20,10 +19,8 @@ on:
     paths-ignore:
       - '.gitignore'
       - 'README.md'
-      - '.github'    
-
-jobs:
-  
+      - '.github'
+jobs:  
   build:
     steps:
       - uses: actions/checkout@v3
